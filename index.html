@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <div class="cursor"></div> -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PUSSGRC HOSHIARPUR</title>
+        <link rel="stylesheet" href="homepage.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Girassol&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <div class="custom__cursor__outer"></div>
+        <div class="custom__cursor__inner"></div>
+        <header>
+            <nav class="navbar">
+                <div class="nav-image">
+                    <img src="static/PU.png" class="mainlogo" />
+                </div>
+
+                <div class="nav-elements"><b>PUSSGRC HOSHIARPUR</b></div>
+
+                <!-- <hr id="nav-separation"> -->
+
+                <div class="nav-date-time">
+                    <span id="date">ERR!</span><br />
+                    <span id="time">ERR!</span>
+                </div>
+            </nav>
+
+            <div class="sidebar">
+                <div class="sidebar-icons">
+                    <!-- menu -->
+                    <div class="side-contentbtn" id="menu-btn">
+                        <img
+                            class="refactor-svg"
+                            id="menu"
+                            src="https://www.svgrepo.com/show/422513/hamburger-menu-more.svg"
+                        />
+                        <span class="sidebar-text"></span>
+                    </div>
+
+                    <hr class="icon-segregation" />
+
+                    <div class="main-icons">
+                        <!-- home -->
+                        <div class="sidebtn" id="home-btn">
+                            <img
+                                class="refactor-svg"
+                                src="https://www.svgrepo.com/show/111256/house.svg"
+                            />
+
+                            <span class="sidebar-text">HOME</span>
+                        </div>
+
+                        <hr class="icon-segregation" />
+
+                        <!-- noticeboard -->
+                        <div class="sidebtn" id="notice-board-btn">
+                            <img
+                                class="refactor-svg"
+                                src="https://icons.veryicon.com/png/o/miscellaneous/linear-icon-25/bulletin-board-4.png"
+                            />
+                            <span class="sidebar-text">NOTICES</span>
+                        </div>
+                        <hr class="icon-segregation" />
+
+                        <!-- courses -->
+                        <div class="sidebtn" id="courses-btn">
+                            <img
+                                class="refactor-svg"
+                                src="https://www.svgrepo.com/show/473031/book-bookmark.svg"
+                            />
+                            <span class="sidebar-text">COURSES</span>
+                        </div>
+                        <hr class="icon-segregation" />
+
+                        <!-- faculty & staff -->
+                        <div class="sidebtn" id="faculty-btn">
+                            <img
+                                class="refactor-svg"
+                                src="https://www.svgrepo.com/show/347809/people.svg"
+                            />
+                            <span class="sidebar-text">FACULTY</span>
+                        </div>
+                        <hr class="icon-segregation" />
+
+                        <!-- hostel form -->
+                        <div class="sidebtn" id="hostel-form-btn">
+                            <img
+                                class="refactor-svg"
+                                src="https://www.svgrepo.com/show/3874/contact-form.svg"
+                            />
+                            <span class="sidebar-text">HOSTEL</span>
+                        </div>
+                        <hr class="icon-segregation" />
+
+                        <!-- TPC -->
+                        <div class="sidebtn" id="placement-btn">
+                            <img
+                                class="refactor-svg"
+                                src="https://www.svgrepo.com/show/150658/graduate-certificate.svg"
+                            />
+                            <span class="sidebar-text">HIRINGS</span>
+                        </div>
+                        <hr class="icon-segregation" />
+
+                        <!-- Contact Us -->
+                        <div class="sidebtn" id="contact-us-btn">
+                            <img
+                                class="refactor-svg"
+                                src="static/contact.svg"
+                            />
+                            <span class="sidebar-text">CONTACT</span>
+                        </div>
+                        <hr class="icon-segregation" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-layout">
+            <div class="heading" id="about-us">
+                <b>ABOUT US</b>
+            </div>
+            <div class="heading" id="notice-board">
+                <b>NOTICE BOARD</b>
+            </div>
+            <div class="heading" id="courses">
+                <b>COURSES</b>
+            </div>
+            <div class="heading" id="faculty">
+                <b>FACULTY</b>
+            </div>
+            <div class="heading" id="hostel-form">
+                <b>HOSTEL</b>
+            </div>
+            <div class="heading" id="placement">
+                <b>PLACEMENTS</b>
+            </div>
+            <div class="heading" id="contact-us">
+                <b>CONTACT US</b>
+            </div>
+
+            <!-- About Us Content -->
+            <div class="main-content" id="about-us">
+                <div class="aboutus-image">
+                    <img
+                        id="homepage-pic"
+                        src="https://puchd.ac.in/photos/slide6.png"
+                    />
+                </div>
+                <div class="aboutus-writing">
+                    <p>
+                        Panjab University opened a Regional Centre for imparting
+                        quality technical education to kandi area hoshiarpur
+                        with the name of Swami Sarvanand Giri Panjab University
+                        Regional Centre in year 2006 with four branches of
+                        engineering. In 2007 Panjab university started two new
+                        courses in LAW as BALLB 5 year integrated course and 3
+                        Years LLB course, and Master of computer applications
+                        (MCA).
+                    </p>
+
+                    <p>
+                        The vison of Regional Centre has been made keeping in
+                        mind Vision 2025 of Panjab University.
+                    </p>
+
+                    <p>
+                        <b>Vision:</b><br />
+                        To Be A Globally Renowned Education Hub that Caters
+                        Quality Education.
+                    </p>
+
+                    <p><b>Mission:</b><br /></p>
+
+                    <ul>
+                        <li>
+                            To create a State-of-the-Art infrastructure that
+                            paves the way for new ideas to germinate and create
+                            Educationists, Researchers, Innovators, and
+                            Entrepreneurs who are compatible with the outside
+                            world at Ethical and Global Level.
+                        </li>
+
+                        <li>
+                            To produce a talent that can understand, assimilate
+                            and solve the problems in the allied fields at the
+                            Local, National, and International levels.
+                        </li>
+
+                        <li>
+                            To collaborate with Educational Institutes and
+                            Industries of National and International repute and
+                            provide necessary experiential exposure to budding
+                            talents.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Notice Board Content -->
+            <div class="main-content" id="notice-board">
+                <span>Notice Board Content</span>
+            </div>
+
+            <!-- Courses Content -->
+            <div class="main-content" id="courses">
+                <div class="table-holder">
+                    <table class="style-table">
+                        <tr>
+                            <th>Course Name</th>
+                            <td>
+                                Bachelor of Engineering (Computer Science and
+                                Engineering)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th>
+                            <td>4 years</td>
+                        </tr>
+                        <tr>
+                            <th>Seats</th>
+                            <td>54+8 NRI /FN+3EWS+9 Additional Seats</td>
+                        </tr>
+                        <tr>
+                            <th>Fees</th>
+                            <td>
+                                First Year 1st installment (40000 INR), 2nd
+                                installment (47755 INR) [2018-19] [2018-19]
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Eligiblity</th>
+                            <td>
+                                Visit the link:
+                                <a
+                                    href="https://jacchd.admissions.nic.in/eligibility-status/"
+                                    target="_blank"
+                                >
+                                    Link</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <hr />
+
+                <div class="table-holder">
+                    <table class="style-table">
+                        <tr>
+                            <th>Course Name</th>
+                            <td>
+                                Bachelor of Engineering (Mechanical Engineering)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th>
+                            <td>4 years</td>
+                        </tr>
+                        <tr>
+                            <th>Seats</th>
+                            <td>54+8 NRI /FN+3EWS+9 Additional Seats</td>
+                        </tr>
+                        <tr>
+                            <th>Fees</th>
+                            <td>
+                                First Year 1st installment (40000 INR), 2nd
+                                installment (47755 INR) [2018-19] [2018-19]
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Eligiblity</th>
+                            <td>
+                                Visit the link:
+                                <a
+                                    href="https://jacchd.admissions.nic.in/eligibility-status/"
+                                    target="_blank"
+                                >
+                                    Link</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <hr />
+
+                <div class="table-holder">
+                    <table class="style-table">
+                        <tr>
+                            <th>Course Name</th>
+                            <td>
+                                Bachelor of Engineering (Electronics and
+                                Communication)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th>
+                            <td>4 years</td>
+                        </tr>
+                        <tr>
+                            <th>Seats</th>
+                            <td>54+8 NRI /FN+3EWS+9 Additional Seats</td>
+                        </tr>
+                        <tr>
+                            <th>Fees</th>
+                            <td>
+                                First Year 1st installment (40000 INR), 2nd
+                                installment (47755 INR) [2018-19] [2018-19]
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Eligiblity</th>
+                            <td>
+                                Visit the link:
+                                <a
+                                    href="https://jacchd.admissions.nic.in/eligibility-status/"
+                                    target="_blank"
+                                >
+                                    Visit</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table-holder">
+                    <table class="style-table">
+                        <tr>
+                            <th>Course Name</th>
+                            <td>
+                                Bachelor of Engineering (Information Technology)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th>
+                            <td>4 years</td>
+                        </tr>
+                        <tr>
+                            <th>Seats</th>
+                            <td>54+8 NRI /FN+3EWS+9 Additional Seats</td>
+                        </tr>
+                        <tr>
+                            <th>Fees</th>
+                            <td>
+                                First Year 1st installment (40000 INR), 2nd
+                                installment (47755 INR) [2018-19] [2018-19]
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Eligiblity</th>
+                            <td>
+                                Visit the link:
+                                <a
+                                    href="https://jacchd.admissions.nic.in/eligibility-status/"
+                                    target="_blank"
+                                >
+                                    Visit</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Faculty Content -->
+            <div class="main-content" id="faculty">
+                <span>Faculty Content</span>
+            </div>
+
+            <!-- Hostel Form Content -->
+            <div class="main-content" id="hostel-form">
+                <form id="dormitory-form">
+                    <fieldset id="field">
+                        <legend id="form-legend">Application Form</legend>
+
+                        <label for="name" class="form-labels"
+                            >1. Name of Applicant</label
+                        ><br />
+                        <input
+                            type="text"
+                            class="form-text"
+                            id="name"
+                        /><br /><br />
+
+                        <fieldset id="sub-field">
+                            <label for="dob" class="form-labels"
+                                >a) Date of Birth</label
+                            ><br />
+                            <input
+                                type="date"
+                                class="form-text"
+                                id="dob"
+                            /><br /><br />
+                        </fieldset>
+
+                        <label for="f-name" class="form-labels"
+                            >2. Father's Name</label
+                        ><br />
+                        <input
+                            type="text"
+                            class="form-text"
+                            id="f-name"
+                        /><br /><br />
+
+                        <label for="m-name" class="form-labels"
+                            >3. Mother's Name</label
+                        ><br />
+                        <input
+                            type="text"
+                            class="form-text"
+                            id="m-name"
+                        /><br /><br />
+
+                        <fieldset id="sub-field">
+                            <label for="a-g-name" class="form-labels"
+                                >a) Guardian's Name</label
+                            ><br />
+                            <input
+                                type="text"
+                                class="form-text"
+                                id="a-g-name"
+                            /><br /><br />
+
+                            <label for="b-f-name" class="form-labels"
+                                >b) Father's/Guardian's Occupation &
+                                Income</label
+                            ><br />
+                            <input
+                                type="text"
+                                class="form-text"
+                                id="b-f-name"
+                            /><br /><br />
+                        </fieldset>
+
+                        <label class="form-labels">4. Address</label><br />
+                        <fieldset id="sub-field">
+                            <label for="p-address" class="form-labels"
+                                >a) Permanent Address</label
+                            ><br />
+                            <input
+                                type="text"
+                                class="form-text"
+                                id="p-address"
+                            /><br /><br />
+
+                            <label for="c-address" class="form-labels"
+                                >b) Current Residential Address</label
+                            ><br />
+                            <input
+                                type="text"
+                                class="form-text"
+                                id="c-address"
+                            /><br /><br />
+                        </fieldset>
+
+                        <label for="nationality" class="form-labels"
+                            >5. Nationality</label
+                        ><br />
+                        <input
+                            type="text"
+                            class="form-text"
+                            id="nationality"
+                        /><br /><br />
+                    </fieldset>
+
+                    <fieldset id="field-button">
+                        <input type="button" id="form-submit" value="SUBMIT" />
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- Placement Cell Content -->
+            <div class="main-content" id="placement">
+                <div class="placement-image">
+                    <img
+                        id="placement-pic"
+                        src="https://purch.puchd.ac.in/tnp.jpg"
+                    />
+                </div>
+                <br />
+
+                <div class="aboutus-writing">
+                    <p>
+                        PUSSGRC has Training, Placement & Industrial Liaison
+                        committee, headed by Mr.Rajeev Kumar Dang. As part of
+                        this committee, Dr. Balwant Raj is the overall Training
+                        Incharge. Committee has faculty members from each branch
+                        of Engineering and MCA. This committee looks after all
+                        Training & Placement related activities for the benefit
+                        of students. For efficient and smooth working of this
+                        committee, student committee is constituted which works
+                        under the guidance of faculty members. The student
+                        members from each department are selected on the basis
+                        of personal interviews conducted by faculty members.
+                        Besides creating different job avenues for the students,
+                        the committee ensures that students are well equipped to
+                        meet the requirements of the industry . For enhancing
+                        the employability of students, various workshops,
+                        seminars and expert talks are organized by this
+                        committee. Committee works in close liaison with Central
+                        Placement Cell, Panjab University Chandigarh. The
+                        students of the campus have been placed in reputed firms
+                        like Infosys, Tech Mahindra, Accenture, Quark, SML
+                        ISUZU, Mahindra & Mahindra, Ambuja Cement, Honda, Wipro,
+                        ITC, Infogain, L&T Infotech, HP. In addition to this,
+                        students of our campus are working in various Public
+                        sector undertakings, state services & armed forces.
+                        Every year students pursue higher studies in India and
+                        abroad.
+                    </p>
+
+                    <p>
+                        <b>TPO's Message</b><br />
+                        It gives me immense pleasure to invite you to the
+                        placement program at Panjab University SSG Regional
+                        Centre, Hoshiarpur. The multi-faculty campus of Panjab
+                        University was started in 2006. It offers Bachelor of
+                        Engineering (Mechanical, Computer Science, Information
+                        Technology, Electronics & Communication) and MCA
+                        courses. Students in B.E. are admitted on basis of rank
+                        achieved in all Indian Entrance test (JEE). Students are
+                        getting exposure through intensive and rigorous studies
+                        and training. Under the guidance of erudite faculty, our
+                        students are ready for on campus placements.
+                    </p>
+
+                    <p>
+                        The course curriculum to which these students have been
+                        exposed and groomed is at par with National and
+                        International curriculum. The syllabus has been framed,
+                        keeping in view the latest requirements of the industry.
+                        Our infrastructure, qualified faculty, unbiased
+                        admission & evaluation procedure, well disciplined and
+                        hard working students & faculty produce finest Engineers
+                        in the country
+                    </p>
+
+                    <p>
+                        We cordially invite you for the Campus Placements in
+                        Panjab University Campus, Hoshiarpur and hope to bulid a
+                        long lasting relationship with your esteemed
+                        organization.
+                    </p>
+
+                    <p>
+                        Mr. Rajeev Kumar Dang<br />
+                        Incharge-Training, Placement &<br />
+                        Industrial Liaison committee
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Us Content -->
+            <div class="main-content" id="contact-us">
+                <p>
+                    Satish Kumar<br />
+                    <b>Director</b><br />
+                    <i
+                        >P.U. Swami Sarvanand Giri Regional Centre <br />
+                        Panjab University Regional Centre<br />
+                        Hoshiarpur, Punjab<br />
+                        India</i
+                    ><br /><br />
+                    Telephone: +91 01882-272202<br />
+                    Fax: +91 01882-282221<br />
+                    Email:
+                    <a href="mailto: drpussgrchsp@pu.ac.in"
+                        >drpussgrchsp@pu.ac.in</a
+                    >
+                    <br /><br /><br />
+
+                    for Admission related queries email:
+                    <a href="mailto: drpussgrchsp@pu.ac.in"
+                        >drpussgrchsp@pu.ac.in</a
+                    >
+                </p>
+            </div>
+        </div>
+
+        <!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+            integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+        <!-- <script src="'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/"></script> -->
+        <script src="script.js"></script>
+    </body>
+</html>
