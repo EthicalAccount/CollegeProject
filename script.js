@@ -1,16 +1,16 @@
-const cursor = document.querySelector('.custom__cursor__outer');
+const cursor = document.querySelector(".custom__cursor__outer");
 
 // document.addEventListener('mousemove', e => {
 //     cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
 // })
 
-document.addEventListener('click', () => {
+document.addEventListener("click", () => {
     cursor.classList.add("click");
 
     setTimeout(() => {
         cursor.classList.remove("click");
-    }, 500)
-})
+    }, 500);
+});
 
 $(window).ready(function () {
     let mouseX = 0;
@@ -69,7 +69,7 @@ function updateTime() {
         "" +
         days[currentdate.getDay()] +
         " " +
-        (currentdate.getDate()) +
+        currentdate.getDate() +
         ", " +
         currentdate.getFullYear();
 

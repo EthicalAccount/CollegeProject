@@ -436,7 +436,7 @@ body {
 
 @media (max-width: 650px) {
     .nav-elements {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .nav-image {
@@ -447,17 +447,7 @@ body {
     }
 
     .nav-date-time {
-        align-items: right;
-        font-family: var(--nav-font);
-        font-size: 0.7rem;
-        font-weight: 600;
-        font-style: italic;
-        color: #eeeeee;
-
-        margin-right: 0.01rem;
-        /*border: 0.1rem solid;
-        border-radius: 7px;*/
-        padding: 3px 1px 2px 5px;
+        display: none;
     }
 
     #date {
@@ -472,21 +462,29 @@ body {
 
     .form-labels {
         font-size: small;
-        font-weight: 500;
+        font-weight: 700;
     }
 
     #form-legend {
-        font-size: medium;
-        font-weight: 500;
+        font-size: small;
+        font-weight: 700;
     }
 
     #form-submit {
         font-size: 1rem;
         font-family: var(--nav-font);
-        font-weight: 500;
+        font-weight: 700;
         width: 100%;
         background-color: #eeeeee;
         border-radius: 5px;
+    }
+
+    .form-text {
+        margin-top: 5px;
+        font-family: "Montserrat", sans-serif;
+        font-size: small;
+        font-weight: 700;
+        width: 100%;
     }
 
     #field {
@@ -496,5 +494,24 @@ body {
 
     #field-button {
         margin: 10px 2px 10px 10px;
+    }
+
+    .style-table td {
+        /* border-collapse: collapse; */
+        border: 3px solid var(--crimson-red);
+        /* border-collapse: collapse; */
+        text-align: left;
+        padding: 10px 10px 10px 10px;
+        font-size: medium;
+        max-width: 600px;
+    }
+
+    .style-table th {
+        text-align: left;
+        padding: 10px 10px 10px 10px;
+        background-color: rgb(4, 12, 18, 0.1);
+        border: 3px solid var(--crimson-red);
+        color: rgb(4, 12, 18);
+        max-width: 50px;
     }
 }
