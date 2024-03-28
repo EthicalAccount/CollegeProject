@@ -69,7 +69,7 @@ function updateTime() {
         "" +
         days[currentdate.getDay()] +
         " " +
-        (currentdate.getDate() + 1) +
+        (currentdate.getDate()) +
         ", " +
         currentdate.getFullYear();
 
