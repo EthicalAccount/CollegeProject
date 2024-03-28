@@ -74,41 +74,6 @@ body {
     );
 }
 
-
-*{
-    cursor: none;
-}
-
-.custom__cursor__inner{
-    height: 7.5px;
-    width: 7.5px;
-    position: fixed;
-    transform: translate(0px, 0px);
-    background-color: #e9963d;
-    border-radius: 50%;
-    transition: height .3s cubic-bezier(0.46,0.03,0.52,0.96), width .3s cubic-bezier(0.46,0.03,0.52,0.96);
-    z-index: 5000;
-    pointer-events: none;
-}
-
-.custom__cursor__outer{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 8px solid var(--dusky-white);
-    background-color: transparent;
-    position: fixed;
-    top: 7px;
-    left: 7px;
-    z-index: 5000;
-    transform: translate(0px, 0px);
-    pointer-events: none;
-    opacity: 0.4;
-    /* animation: cursorAnim 0.5s infinite alternate; */
-}
-
-
-
 /* Navigation Bar */
 .navbar {
     position: fixed;
@@ -139,7 +104,7 @@ body {
     justify-content: left;
     font-family: var(--nav-font);
     font-size: 1.8rem;
-    font-weight: 450;
+    font-weight: 700;
     color: #ffffff;
     margin-right: auto;
 }
@@ -333,6 +298,8 @@ body {
 #homepage-pic {
     width: 100%;
     border: 2px solid black;
+    border-radius: 5px;
+    min-height: 100px;
 }
 
 /* Courses */
@@ -356,13 +323,16 @@ body {
     text-align: left;
     padding: 10px 10px 10px 10px;
     font-size: medium;
+    max-width: 500px;
 }
 
 .style-table th {
+    text-align: left;
+    padding: 10px 10px 10px 10px;
     background-color: rgb(4, 12, 18, 0.1);
     border: 3px solid var(--crimson-red);
-    /* color: #ffffff; */
     color: rgb(4, 12, 18);
+    min-width: 100px;
 }
 
 #field {
@@ -386,12 +356,12 @@ body {
 
 .form-labels {
     font-size: larger;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #form-legend {
     font-size: larger;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #form-submit {
@@ -407,7 +377,7 @@ body {
     margin-top: 5px;
     font-family: "Montserrat", sans-serif;
     font-size: large;
-    font-weight: 500;
+    font-weight: 700;
     width: 100%;
 }
 
@@ -420,6 +390,7 @@ body {
     max-width: 900px;
     max-height: 400px;
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 .placement-image {
@@ -428,35 +399,102 @@ body {
     justify-content: center;
 }
 
+@media (min-width: 651px) {
+    * {
+        cursor: none;
+    }
+
+    .custom__cursor__inner {
+        height: 7.5px;
+        width: 7.5px;
+        position: fixed;
+        transform: translate(0px, 0px);
+        background-color: #e9963d;
+        border-radius: 50%;
+        transition: height 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96),
+            width 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        z-index: 5000;
+        pointer-events: none;
+    }
+
+    .custom__cursor__outer {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 8px solid var(--dusky-white);
+        background-color: transparent;
+        position: fixed;
+        top: 7px;
+        left: 7px;
+        z-index: 5000;
+        transform: translate(0px, 0px);
+        pointer-events: none;
+        opacity: 0.4;
+        /* animation: cursorAnim 0.5s infinite alternate; */
+    }
+}
+
 @media (max-width: 650px) {
     .nav-elements {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .nav-image {
+        display: inline-flex;
+        align-items: left;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+    .nav-date-time {
+        align-items: right;
+        font-family: var(--nav-font);
+        font-size: 0.7rem;
+        font-weight: 600;
+        font-style: italic;
+        color: #eeeeee;
+
+        margin-right: 0.01rem;
+        /*border: 0.1rem solid;
+        border-radius: 7px;*/
+        padding: 3px 1px 2px 5px;
+    }
+
+    #date {
+        align-items: right;
+        padding-right: 10px;
+    }
+
+    .mainlogo {
+        width: 35px;
+        height: 30px;
     }
 
     .form-labels {
-        font-size: large;
-        font-weight: 600;
+        font-size: small;
+        font-weight: 500;
     }
 
     #form-legend {
-        font-size: large;
-        font-weight: 600;
+        font-size: medium;
+        font-weight: 500;
     }
 
     #form-submit {
         font-size: 1rem;
         font-family: var(--nav-font);
-        font-weight: 700;
+        font-weight: 500;
         width: 100%;
         background-color: #eeeeee;
         border-radius: 5px;
     }
 
-    .form-text {
-        margin-top: 5px;
-        font-family: "Montserrat", sans-serif;
-        font-size: small;
-        font-weight: 550;
-        width: 100%;
+    #field {
+        display: inline-block;
+        margin: 10px 10px 10px 10px;
+    }
+
+    #field-button {
+        margin: 10px 2px 10px 10px;
     }
 }
