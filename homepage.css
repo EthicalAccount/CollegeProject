@@ -412,21 +412,21 @@ body {
     min-width: 100%;
 }
 
-#cv-link{
+#cv-link {
     width: 20px;
     height: 20px;
 }
 
-.cv-col{
+.cv-col {
     max-width: 30px;
 }
-
 
 #field {
     /* border: transparent; */
     border-radius: 2px;
     margin: 20px 20px 20px 20px;
     padding: 30px 30px 30px 30px;
+    border: 2px solid var(--crimson-red);
 }
 
 #field-button {
@@ -472,6 +472,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: medium;
     font-weight: 500;
+    border: 2px solid var(--crimson-red);
     width: 100%;
 }
 
