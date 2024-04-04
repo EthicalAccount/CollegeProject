@@ -1,8 +1,42 @@
-const cursor = document.querySelector(".custom__cursor__outer");
+// Notices
+let parser = new DOMParser();
+const notices = document.getElementById("notices");
 
-// document.addEventListener('mousemove', e => {
-//     cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-// })
+fetch("notices.txt")
+    .then((res) => res.text())
+    .then((text) => {
+        const lines = text.split("\n");
+        for (let line of lines) {
+            // console.log(line);
+            var match = line.match(/\d{2}\/\d{2}\/\d{4}/);
+
+            line = parser.parseFromString(line, "text/html");
+            let row = document.createElement("tr");
+
+            let cell_1 = document.createElement("th");
+            let cell_2 = document.createElement("td");
+            let links = document.createElement("a");
+
+            cell_1.textContent = match[0];
+            row.appendChild(cell_1);
+
+            links.textContent = line.querySelector("a").textContent;
+            links.style.color = "#a22c29";
+            links.target = "_blank";
+            links.href = line
+                .querySelector("a")
+                .href.replace("127.0.0.1:5501", "purch.puchd.ac.in/");
+
+            cell_2.appendChild(links);
+            row.appendChild(cell_2);
+
+            notices.appendChild(row);
+        }
+    })
+    .catch((e) => console.error(e));
+
+// Cursor
+const cursor = document.querySelector(".custom__cursor__outer");
 
 document.addEventListener("click", () => {
     cursor.classList.add("click");
@@ -96,9 +130,7 @@ function updateTime() {
 }
 
 updateTime();
-setInterval(updateTime, 1000);
-
-//
+setInterval(updateTime, 50);
 
 // Sidebar Expand-Collapse
 const expand_menu = document.getElementById("menu-btn");
@@ -170,55 +202,53 @@ sections.forEach((section) => {
     section.btn.addEventListener("click", () => handleSectionClick(section));
 });
 
-// Update Images
-// var image = document.getElementById("homepage-pic");
-// var images = [
-//     "https://puchd.ac.in/photos/slide2.png",
-//     "https://puchd.ac.in/photos/pu9.jpg",
-//     "https://puchd.ac.in/photos/slide6.png",
-// ];
+//Update Images
+var image = document.getElementById("homepage-pic");
+var images = [
+    "https://puchd.ac.in/photos/slide2.png",
+    "https://puchd.ac.in/photos/pu9.jpg",
+    "https://puchd.ac.in/photos/slide6.png",
+];
 
-// var index = 0;
-// var opacity = 1;
-// var trigger = false;
-// const time = 25000;
-// var staytime = time;
-// var count = 0;
-// const delta = 0.025;
+var index = 0;
+var opacity = 1;
+var trigger = false;
+const time = 250;
+var staytime = time;
+var count = 0;
+const delta = 0.025;
 
-// const sleep = async (milliseconds) => {
-//     await new Promise(resolve => {
-//         return setTimeout(resolve, milliseconds)
-//     })
-// }
+const sleep = async (milliseconds) => {
+    await new Promise((resolve) => {
+        return setTimeout(resolve, milliseconds);
+    });
+};
 
-// async function updateImage() {
-//     if (opacity <= 0) {
-//         image.src = images[index];
-//         index = (index + 1) % images.length;
-//         trigger = true;
-//     }
+async function updateImage() {
+    if (opacity <= 0) {
+        image.src = images[index];
+        index = (index + 1) % images.length;
+        trigger = true;
+    }
 
-//     if (trigger == true) {
-//         opacity += delta;
-//     }
+    if (trigger == true) {
+        opacity += delta;
+    }
 
-//     if (opacity >= 1) {
-//         await sleep(1000);
-//         trigger = false;
-//         staytime = time;
-//     }
+    if (opacity >= 1) {
+        await sleep(1000);
+        trigger = false;
+        staytime = time;
+    }
 
-//     if (trigger == false) {
-//         opacity -= delta;
-//     }
+    if (trigger == false) {
+        opacity -= delta;
+    }
 
-//     // console.log(trigger);
+    image.style.opacity = opacity;
+}
 
-//     image.style.opacity = opacity;
-// }
-
-// setInterval(updateImage, 50);
+setInterval(updateImage, 50);
 
 // JSPDF
 const submit = document.getElementById("form-submit");
@@ -398,6 +428,12 @@ submit.addEventListener("click", function () {
         "...........................................",
         marginX * 3 + 7,
         rel_height + float_above
+    );
+
+    doc.text(
+        "SOLEMN DECLARATIONS: I, solemnly declare that the information given above is correct and \n nothing relevant has been held back. In case I cease to be a student of the class mentioned \nabove or become ineligible for hostel accommodation, I shall inform the Warden immediately and \nleave the hostel. I shall not maintain four wheeler in the hostel. I have sought admission to the \nhostel with the consent of my parents/guardian. I have read the hand book of rules for hostel \nresidents of P.U.S.S.G.R.C and I shall abide by all the rules and other regulations of the university \nand instructions issued from time to time by the Warden/Dean Student Welfare (Women)/Dean \nStudent Welfare/other Competent Authority of the University and shall clear all my hostel dues \nregularly. I along with my Parents/guardian have signed this undertaking with regard to ragging \nprohibition. If I furnish any wrong information, my seat may be cancelled and my hostel fee & \nsecurity be forfeited.",
+        marginX,
+        (rel_height += deltaY + 20)
     );
 
     window.open(doc.output("bloburl"));

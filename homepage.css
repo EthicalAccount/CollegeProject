@@ -28,7 +28,7 @@
     --navy-blue: rgb(5, 68, 94);
     --light-gray: rgb(238, 238, 238);
 
-    --brick-red: rgb(162, 44, 41);
+    --brick-red: #a22c29;
     /* --crimson-red: #c86e74; */
     --crimson-red: #040c12;
     --light-gray-side: rgb(238, 238, 238);
@@ -70,9 +70,8 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(
-        #f9e14c,
-        #e9963d,
-        rgb(255, 252, 234),
+        rgb(233, 150, 61),
+        rgb(249, 225, 76),
         rgb(249, 225, 76),
         rgb(233, 150, 61)
     );
@@ -88,6 +87,7 @@ body {
     background-color: var(--crimson-red);
     border-bottom: var(--border) solid var(--light-gray);
     box-shadow: 0px var(--border) 0px 0px var(--light-gray);
+    z-index: 1;
 }
 
 .nav-image {
@@ -192,6 +192,7 @@ body {
     border-top: 2px solid var(--crimson-red);
     border-right: 2px solid var(--crimson-red);
     background-color: var(--white);
+    z-index: 1;
 }
 
 .refactor-svg {
@@ -304,6 +305,47 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     min-height: 100px;
+    z-index: 0;
+}
+
+/* Notices */
+#notices {
+    /* border: 3px solid var(--crimson-red); */
+    /* border-collapse: collapse; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    font-size: medium;
+    width: 100%;
+}
+
+#notices td {
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    background-color: var(--white);
+    border: 3px solid var(--crimson-red);
+    color: rgb(4, 12, 18);
+    width: 100%;
+}
+
+#notices td a {
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#notices th {
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(4, 12, 18, 0.1);
+    border: 3px solid var(--crimson-red);
+    color: rgb(4, 12, 18);
+    min-width: 100px;
+}
+
+#notices-left {
+    width: 100%;
 }
 
 /* Courses */
@@ -335,15 +377,54 @@ body {
     background-color: rgb(4, 12, 18, 0.1);
     border: 3px solid var(--crimson-red);
     color: rgb(4, 12, 18);
+    width: 100px;
 }
 
-th{
-    width: 100px !important;
+/* Faculty*/
+
+#staff {
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    font-size: medium;
+    width: 100%;
 }
+
+#staff td {
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    background-color: var(--white);
+    border: 3px solid var(--crimson-red);
+    color: rgb(4, 12, 18);
+}
+
+#staff td a {
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#staff th {
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(4, 12, 18, 0.1);
+    border: 3px solid var(--crimson-red);
+    color: rgb(4, 12, 18);
+    min-width: 100%;
+}
+
+#cv-link{
+    width: 20px;
+    height: 20px;
+}
+
+.cv-col{
+    max-width: 30px;
+}
+
 
 #field {
     /* border: transparent; */
-    border-radius: 10px;
+    border-radius: 2px;
     margin: 20px 20px 20px 20px;
     padding: 30px 30px 30px 30px;
 }
@@ -368,19 +449,19 @@ th{
 }
 
 .form-labels {
-    font-size: larger;
+    font-size: medium;
     font-weight: 500;
 }
 
 #form-legend {
     font-size: larger;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 #form-submit {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: var(--nav-font);
-    font-weight: 500;
+    font-weight: 700;
     width: 100%;
     background-color: #eeeeee;
     border-radius: 5px;
@@ -389,14 +470,10 @@ th{
 .form-text {
     margin-top: 5px;
     font-family: "Montserrat", sans-serif;
-    font-size: large;
+    font-size: medium;
     font-weight: 500;
     width: 100%;
 }
-
-/* .hostel-form {
-    display: inline-flex;
-} */
 
 #placement-pic {
     width: 100%;
@@ -439,10 +516,10 @@ th{
         position: fixed;
         top: 7px;
         left: 7px;
-        z-index: 5000;
         transform: translate(0px, 0px);
         pointer-events: none;
         opacity: 0.4;
+        z-index: 5000;
         /* animation: cursorAnim 0.5s infinite alternate; */
     }
 }
@@ -516,5 +593,4 @@ th{
         border: 3px solid var(--crimson-red);
         color: rgb(4, 12, 18);
     }
-    
 }
