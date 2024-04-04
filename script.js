@@ -25,7 +25,7 @@ fetch("notices.txt")
             links.target = "_blank";
             links.href = line
                 .querySelector("a")
-                .href.replace("127.0.0.1:5501", "purch.puchd.ac.in/");
+                .href.replace("ethicalaccount.github.io/CollegeProject/", "purch.puchd.ac.in/");
 
             cell_2.appendChild(links);
             row.appendChild(cell_2);
